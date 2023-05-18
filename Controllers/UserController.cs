@@ -16,6 +16,8 @@ namespace CSharp_MVC1.Controllers
             user.Name = "Karl";
             user.Email = "kpilk@gmail.com";
 
+            ViewBag.User = user;
+
             return View();
         }
     }
