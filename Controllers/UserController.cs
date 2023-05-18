@@ -18,7 +18,7 @@ namespace CSharp_MVC1.Controllers
 
             ViewBag.User = user;
 
-            return View();
+            return View(user);
         }
     }
 }
