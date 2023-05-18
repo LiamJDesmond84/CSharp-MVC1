@@ -7,7 +7,7 @@ namespace CSharp_MVC1.Controllers
     {
 
 
-        [HttpGet("")]
+        [HttpGet("/UserIndex")]
         public IActionResult Index()
         {
 
