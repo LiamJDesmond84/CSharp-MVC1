@@ -10,15 +10,16 @@ namespace CSharp_MVC1.Controllers
         [HttpGet("/UserIndex")]
         public IActionResult Index()
         {
-            // Using @ViewBag in cshtml
+
             User user = new User();
 
             user.Name = "Karl";
             user.Email = "kpilk@gmail.com";
 
+            // Using @ViewBag in cshtml
             ViewBag.User = user;
 
-            // Using @Model in cshtml
+            // Using @Model in cshtml(user argument)
                 // "Index" if you wanted to name a specific View file
             return View("Index", user);
         }
