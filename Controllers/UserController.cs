@@ -13,7 +13,8 @@ namespace CSharp_MVC1.Controllers
 
             User user = new User();
 
-            user.Name = "Karl";
+            user.FirstName = "Karl";
+            user.LastName = "Pilkington";
             user.Email = "kpilk@gmail.com";
 
             // Using @ViewBag in cshtml
