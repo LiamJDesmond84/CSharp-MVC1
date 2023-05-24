@@ -34,7 +34,7 @@ namespace CSharp_MVC1.Controllers
 
             // Using @Model in cshtml(user argument)
                 // "Index" if you wanted to name a specific View file
-            return View("Index", user);
+            return View("Index", users);
         }
     }
 }

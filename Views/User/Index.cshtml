@@ -1,7 +1,7 @@
-﻿@model CSharp_MVC1.Models.User
+﻿@*@model CSharp_MVC1.Models.User
 
-@*@using CSharp_MVC1.Models
-@model User*@
+@using CSharp_MVC1.Models
+@model List<User>
 
 
 
@@ -13,5 +13,10 @@
 <div class="text-center">
 @*    <h1>@ViewBag.User.Name - @ViewBag.User.Email</h1>
 *@
-    <h1>@Model.FirstName - @Model.Email</h1>
+    @*<h1>@Model.FirstName - @Model.Email</h1>*@
+
+    @foreach(var person in Model)
+    {
+        <p>@person.FirstName @person.LastName</p>
+    }
 </div>
