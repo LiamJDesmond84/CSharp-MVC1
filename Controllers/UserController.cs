@@ -12,7 +12,7 @@ namespace CSharp_MVC1.Controllers
         public IActionResult Index()
         {
 
-            List<User> users = new List<User>();
+ 
 
             User user = new User();
 
@@ -22,18 +22,23 @@ namespace CSharp_MVC1.Controllers
 
             User user2 = new User();
 
-            user.FirstName = "Ricky";
-            user.LastName = "Gervais";
-            user.Email = "rickyg@gmail.com";
+            user2.FirstName = "Ricky";
+            user2.LastName = "Gervais";
+            user2.Email = "rickyg@gmail.com";
 
             // Using @ViewBag in cshtml
             ViewBag.User = user;
 
-            users.Add(user);
-            users.Add(user2);
+
+            List<User> users = new List<User>() 
+            { 
+                user, user2 
+            };
+
+
 
             // Using @Model in cshtml(user argument)
-                // "Index" if you wanted to name a specific View file
+            // "Index" if you wanted to name a specific View file
             return View("Index", users);
         }
     }
